@@ -45,14 +45,21 @@ public class PRAK104_2110817210005_MRenaldAbdi {
             } 
         }
         
-        // Menampilkan Hasil
-        if(KartuBudi > KartuAndi) {
-            System.out.println("Budi");
-        } else if(KartuBudi < KartuAndi) {
-            System.out.println("Andi");
-        } else {
-            System.out.println("Seri");
+        // Menampilkan Pemenang
+        for(int i = 0; i < 3; i++) {
+            if((Andi[i] < 2 || Andi[i] > 10) || (Budi[i] < 2 || Budi[i] > 10)) {
+                System.out.println("Poin Kartu Hanya Bernilai 2 - 10");
+                break;
+            } else if(KartuBudi > KartuAndi) {
+                System.out.println("Budi");
+                break;
+            } else if(KartuBudi < KartuAndi) {
+                System.out.println("Andi");
+                break;
+            } else {
+                System.out.println("Seri");
+                break;
+            } 
         }
     }
-    
 }
